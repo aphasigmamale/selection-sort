@@ -1,0 +1,323 @@
+Assignment 3
+ 
+INPUT
+
+#include<iostream>
+using namespace std;
+int main()
+{ char chr;
+int a[10][10],b[10][10],c[10][10],row,col,i,j,ch,m=0,p=0,q=0;
+do{
+cout<<"\t"<<"*************************"<<endl<<endl;
+cout<<"\t"<<"ENTER YOUR CHOICE NUMBER"<<endl<<endl<<endl;
+cout<<"\t"<<"_______MENU_______"<<endl<<endl;
+cout<<"\t"<<"1).MATRIX ADDITION"<<endl;
+cout<<"\t"<<"2).MATRIX SUBSTRACTION"<<endl;
+cout<<"\t"<<"3).MATRIX MULTIPLICATION"<<endl;
+cout<<"\t"<<"4).MATRIX TRANSPOSE"<<endl;
+cout<<"\t"<<"5).EXIT"<<endl;
+cout<<"\t"<<"*************************"<<endl<<endl;
+cin>>ch; // acceppt choice from user
+switch(ch)
+{
+case 1: //addition of matrix
+// matrix a
+cout<<"ENTER MATRIX 'A' "<<endl;
+cout<<"ENTER NO OF ROWS OF MATRIX A"<<endl;
+cin>>row;
+cout<<"ENTER NO OF COLOUMNS OF MATRIX A"<<endl;
+cin>>col;
+cout<<"ENTER MATRIX ELEMENTS :"<<endl;
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+cout<<"\t"<<"a["<<i<<"]["<<j<<"]\t";
+cin>>a[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX A IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<a[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+//matrix b
+cout<<"ENTER MATRIX 'B' "<<endl;
+cout<<"ENTER NO OF ROWS OF MATRIX B"<<endl;
+cin>>row;
+cout<<"ENTER NO OF COLOUMNS OF MATRIX B"<<endl;
+cin>>col;
+cout<<"ENTER MATRIX ELEMENTS :"<<endl;
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+cout<<"\t"<<"b["<<i<<"]["<<j<<"]\t";
+cin>>b[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX B IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<b[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+//ADDITION OF MATRIX A & B .
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+c[i][j]=a[i][j]+b[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX ADDITION IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<c[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+break;
+case 2: //substraction of matrix
+// matrix a
+cout<<"ENTER MATRIX 'A' "<<endl;
+cout<<"ENTER NO OF ROWS OF MATRIX A"<<endl;
+cin>>row;
+cout<<"ENTER NO OF COLOUMNS OF MATRIX A"<<endl;
+cin>>col;
+cout<<"ENTER MATRIX ELEMENTS :"<<endl;
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+cout<<"\t"<<"a["<<i<<"]["<<j<<"]\t";
+cin>>a[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX A IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<a[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+//matrix b
+cout<<"ENTER MATRIX 'B' "<<endl;
+cout<<"ENTER NO OF ROWS OF MATRIX B"<<endl;
+cin>>row;
+cout<<"ENTER NO OF COLOUMNS OF MATRIX B"<<endl;
+cin>>col;
+cout<<"ENTER MATRIX ELEMENTS :"<<endl;
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+cout<<"\t"<<"b["<<i<<"]["<<j<<"]\t";
+cin>>b[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX B IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<b[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+//substraction OF MATRIX A & B .
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+c[i][j]=a[i][j]-b[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX SUBSTRACTION IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<c[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+break;
+case 3: //MULTIPLICATION of matrix
+// matrix a
+cout<<"ENTER MATRIX 'A' "<<endl;
+cout<<"ENTER NO OF ROWS OF MATRIX A"<<endl;
+cin>>row;
+cout<<"ENTER NO OF COLOUMNS OF MATRIX A"<<endl;
+cin>>col;
+cout<<"ENTER MATRIX ELEMENTS :"<<endl;
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+cout<<"\t"<<"a["<<i<<"]["<<j<<"]\t";
+cin>>a[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX A IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<a[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+//matrix b
+cout<<"ENTER MATRIX 'B' "<<endl;
+cout<<"ENTER NO OF ROWS OF MATRIX B"<<endl;
+cin>>row;
+cout<<"ENTER NO OF COLOUMNS OF MATRIX B"<<endl;
+cin>>col;
+cout<<"ENTER MATRIX ELEMENTS :"<<endl;
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+cout<<"\t"<<"b["<<i<<"]["<<j<<"]\t";
+cin>>b[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX B IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<b[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+//MULTIPLICATION OF MATRIX A & B .
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+ for(int k=0;k<col;k++)
+ {
+c[i][j]=a[i][k]*b[k][j]+c[i][j];
+ }
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX multiplication IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<c[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+break;
+case 4: //transpose of matrix
+// matrix a
+do{
+cout<<"ENTER MATRIX 'A' "<<endl;
+cout<<"ENTER NO OF ROWS OF MATRIX A"<<endl;
+cin>>row;
+cout<<"ENTER NO OF COLOUMNS OF MATRIX A"<<endl;
+cin>>col;
+cout<<endl<<endl;
+}while(row!=col);
+cout<<"ENTER MATRIX ELEMENTS :"<<endl;
+for(i=0;i<row;i++)
+{
+for(j=0;j<col;j++)
+{
+cout<<"\t"<<"a["<<i<<"]["<<j<<"]\t";
+cin>>a[i][j];
+}
+}
+cout<<endl<<endl<<"YOUR MATRIX A IS :"<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<a[i][j]<<"\t";
+}
+cout<<"||"<<endl;
+}
+//transpose of matrix
+cout<<"TRANSPOSE OF MATRIX IS :"<<endl<<endl;
+for(i=0;i<row;i++)
+{ cout<<"||"<<"\t";
+for(j=0;j<col;j++)
+{
+cout<<a[j][i]<<"\t";
+}
+cout<<"||"<<endl;
+}
+break;
+default : break;
+} cout<<"DO YOU WANT TO CONTINUE ..(Y_es/N_o) :"<<endl<<endl;
+ cin>>chr;
+ }while(chr=='y'||chr=='Y');
+}
+
+OUTPUT
+
+1
+ENTER MATRIX 'A' 
+ENTER NO OF ROWS OF MATRIX A
+3
+ENTER NO OF COLOUMNS OF MATRIX A
+3
+ENTER MATRIX ELEMENTS :
+	a[0][0]	1
+	a[0][1]	2
+	a[0][2]	3
+	a[1][0]	4
+	a[1][1]	5
+	a[1][2]	6
+	a[2][0]	7
+	a[2][1]	8
+	a[2][2]	9
+
+
+YOUR MATRIX A IS :
+||	1	2	3	||
+||	4	5	6	||
+||	7	8	9	||
+ENTER MATRIX 'B' 
+ENTER NO OF ROWS OF MATRIX B
+3
+ENTER NO OF COLOUMNS OF MATRIX B
+3
+ENTER MATRIX ELEMENTS :
+	b[0][0]	9
+	b[0][1]	8
+	b[0][2]	7
+	b[1][0]	6
+	b[1][1]	5
+	b[1][2]	4
+	b[2][0]	3
+	b[2][1]	2
+	b[2][2]	1
+
+
+YOUR MATRIX B IS :
+||	9	8	7	||
+||	6	5	4	||
+||	3	2	1	||
+
+
+YOUR MATRIX ADDITION IS :
+||	10	10	10	||
+||	10	10	10	||
+||	10	10	10	||
+DO YOU WANT TO CONTINUE ..(Y_es/N_o) :
