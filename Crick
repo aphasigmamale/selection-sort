@@ -1,0 +1,36 @@
+def intersect(list1, list2):
+  result = []
+  for element in list1:
+    if element in list2:
+      result.append(element)
+  return result
+ 
+def diff(list1, list2):
+  result = []
+  for element in list1:
+    if element not in list2:
+      result.append(element)
+  return result
+ 
+ 
+cricket_students = input("Enter the names of the students who play cricket, separated by commas: ").split(',')
+badminton_students = input("Enter the names of the students who play badminton, separated by commas: ").split(',')
+football_students = input("Enter the names of the students who play football, separated by commas: ").split(',')
+ 
+ 
+cricket_students = list(set(cricket_students))
+badminton_students = list(set(badminton_students))
+football_students = list(set(football_students))
+ 
+Q1 = intersect(cricket_students,badminton_students)
+print("Q1 : ",Q1)
+ 
+Q2 = diff(cricket_students + badminton_students,Q1)
+print("Q2 : ",Q2)
+ 
+SQ3 = diff(football,Q1)
+print("Q3 : ",len(SQ3))
+ 
+SQ4 = intersect(cricket,football)
+Q4 = diff(SQ4,badminton)
+print(" Q4 :",len(Q4))
